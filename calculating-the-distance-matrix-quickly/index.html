@@ -1,0 +1,59 @@
+<!doctype html>
+
+<head>
+  <script src="../d3.v7.min.js"></script>
+  <script src="../template.v2.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf8">
+</head>
+
+<body>
+  <d-front-matter>
+    <script id='distill-front-matter' type="text/json">{
+    "title": "Calculating the distance matrix quickly.",
+    "description": "A distance matrix calculation can be implemented in multiple ways, so here I explore the performance differences.",
+    "authors": [
+      {
+        "author":"Lukas Turcani",
+        "authorURL":"https://github.com/lukasturcani",
+        "affiliations": [{"name": "Acceptable Software"}]
+      }
+    ],
+    "katex": {
+      "delimiters": [
+        {"left": "$$", "right": "$$", "display": false}
+      ]
+    }
+  }</script>
+  </d-front-matter>
+  <d-title>
+    <p>Distance matrix calculations can quickly become a bottleneck for a workflow because
+      of their <d-math>O(n^2)</d-math> runtime complexity. This is pretty annoying, so I want to create a
+      drop-in replacement for the <a
+        href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html">
+        <d-code language="python">scipy.spatial.distance.pdist</d-code>
+      </a>
+      function, which runs much
+      faster. In this post, I am going to propose different impementations for calculating
+      the distance matrix, predict the relative performance of each implementation, check if
+      my predictions are correct and try to understand why they were wrong,
+      as I am sure they will be.
+    </p>
+  </d-title>
+  <d-byline></d-byline>
+  <d-article>
+    <d-toc></d-toc>
+    <h2>What is a distance matrix?</h2>
+    <p>A distance matrix is a matrix, where each element represents the distance
+      between two points. A picture says a thousand words, so hopefully the interactive graphic
+      will explain just how a distance matrix comes together.</p>
+    <p>As you can see, the matrix is symmteric, and each distance appears twice. This should
+      come as no surprise, the distance from point <d-math>a</d-math> to point <d-math>b</d-math> is the same as the
+      distance from
+      point <d-math>b</d-math> to point <d-math>a</d-math>!</p>
+  </d-article>
+  <d-appendix>
+    <d-bibliography src="bibliography.bib"></d-bibliography>
+  </d-appendix>
+
+</body>
