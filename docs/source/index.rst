@@ -3,14 +3,19 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to blog's documentation!
-================================
+Welcome to my blog!
+===================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :hidden:
+  :caption: Posts:
+
+  ecs_system_registration_in_rust
 
 
+I'm going to be writing explanations about things from
+time to time.
 
 Indices and tables
 ==================
