@@ -7,7 +7,7 @@ Welcome to my blog!
 ===================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :hidden:
   :caption: Posts:
 
