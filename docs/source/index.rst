@@ -12,6 +12,7 @@ Welcome to my blog!
   :caption: Posts:
 
   ecs_system_registration_in_rust
+  rust_boids
 
 
 I'm going to be writing explanations about things from
