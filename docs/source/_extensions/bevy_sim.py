@@ -48,7 +48,7 @@ def _bevy_sim_node_to_html(self, node: BevySimNode) -> None:
         <script type="module">
             import init from './_static/bevy_sims/{node.sim_name}/{node.lib}';
             init();
-        </script>'
+        </script>
         """
     )
     raise nodes.SkipNode
