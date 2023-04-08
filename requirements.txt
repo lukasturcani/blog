@@ -1,2 +1,5 @@
-sphinx
 furo
+requests
+sphinx
+types-docutils
+types-requests

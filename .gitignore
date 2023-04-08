@@ -1,1 +1,3 @@
 docs/build
+docs/source/_static/bevy_sims
+__pycache__
