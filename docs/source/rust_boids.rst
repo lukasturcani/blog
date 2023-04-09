@@ -9,7 +9,7 @@ Introduction
 In this post I'll cover how I managed to get this blog post
 to display the simulation below.
 
-.. bevy-sim:: https://github.com/lukasturcani/rust-boids/releases/download/v0.0.6/rust-boids-wasm.tar.gz
+.. bevy-sim:: https://github.com/lukasturcani/rust-boids/releases/download/v0.0.7/rust-boids-wasm.tar.gz
 
 The key points about this bit work are:
 
