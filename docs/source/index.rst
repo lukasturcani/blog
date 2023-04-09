@@ -11,12 +11,11 @@ Welcome to my blog!
   :hidden:
   :caption: Posts:
 
-  ecs_system_registration_in_rust
   rust_boids
+  ecs_system_registration_in_rust
 
 
-I'm going to be writing explanations about things from
-time to time.
+I'm going to be writing explanations about things from time to time.
 
 Indices and tables
 ==================
