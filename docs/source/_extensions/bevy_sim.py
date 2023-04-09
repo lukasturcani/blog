@@ -1,3 +1,4 @@
+import hashlib
 import pathlib
 import tarfile
 import typing
@@ -29,7 +30,7 @@ class BevySimDirective(SphinxDirective):
 
     def run(self) -> list[nodes.Node]:
         url = self.content[0]
-        name = str(hash(url))
+        name = hashlib.sha1(url.encode()).hexdigest()
         lib = _extract_sim(url, name)
         return [BevySimNode(name, lib)]
 
@@ -48,7 +49,7 @@ def _bevy_sim_node_to_html(self, node: BevySimNode) -> None:
         <script type="module">
             import init from './_static/bevy_sims/{node.sim_name}/{node.lib}';
             init();
-        </script>'
+        </script>
         """
     )
     raise nodes.SkipNode
